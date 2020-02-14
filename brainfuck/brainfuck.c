@@ -1,15 +1,13 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
-​
 #define BUFF_SIZE 2048
-​
+
 int			main(int argc, const char *argv[])
 {
 	int		i;
 	int		loop;
 	char	*pointer;
-​
 	if (argc == 2)
 	{
 		i = 0;
@@ -53,3 +51,4 @@ int			main(int argc, const char *argv[])
 		write(1, "\n", 1);
 	return (0);
 }
+
