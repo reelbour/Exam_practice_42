@@ -1,14 +1,15 @@
 #include <stdlib.h>
+#include <stdio.h>
 
-char *ft_itoa_base(int value, int base)
+char    *ft_itoa_base(int value, int base)
 {
   int len;
   char *pointer;
   long nb;
   char *base_string = "0123456789ABCDEF";
 
-  if (value = 0)
-    return ('0');
+  if (value == 0)
+    return 0;
   len = 0;
   nb = value;
   while(nb)
@@ -28,7 +29,7 @@ char *ft_itoa_base(int value, int base)
     return NULL;
   pointer[len] = '\0';
 
-  while(nbr)
+  while(nb)
   {
     pointer[--len] = base_string[nb % base];
     nb = nb / base;
@@ -38,3 +39,10 @@ char *ft_itoa_base(int value, int base)
 
   return pointer;
 }
+
+int		main(int ac, char **av)//
+{//
+	if (ac == 3)//
+		printf("%s", ft_itoa_base(atoi(av[1]), atoi(av[2])));//
+	return (1);//
+}//
